@@ -2,8 +2,9 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EverBright Exteriors | Window Cleaning &amp; Pressure Washing – Mount Juliet, TN</title>
-<meta name="description" content="Premium window cleaning and pressure washing in Mount Juliet and Nashville, TN. Licensed, professional, locally owned. Free estimates – call 615-854-5579.">
+<title>EverBright Exteriors | Window Cleaning &amp; Pressure Washing in Mount Juliet, TN</title>
+<meta name="description" content="EverBright Exteriors offers professional window cleaning in Mount Juliet, pressure washing in Mount Juliet, gutter cleaning in Mount Juliet, and house washing in Nashville. Licensed, insured &amp; locally owned. Call 615-854-5579 for a free estimate.">
+<meta name="keywords" content="window cleaning Mount Juliet, pressure washing Mount Juliet, gutter cleaning Mount Juliet, house washing Nashville, exterior cleaning Mount Juliet TN, EverBright Exteriors">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -361,6 +362,109 @@
   .footer-bottom p { font-size: 0.75rem; color: var(--gray); }
   .footer-bottom .lic { color: var(--blue-pale); }
 
+  /* ── REVIEWS ── */
+  #reviews { background: #0d0d0d; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  .review-card {
+    background: linear-gradient(135deg, rgba(13,27,42,0.6) 0%, rgba(10,10,10,0.8) 100%);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 36px 32px;
+    position: relative;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .review-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(59,142,232,0.35);
+    box-shadow: 0 12px 40px rgba(30,107,196,0.1);
+  }
+  .review-stars {
+    display: flex; gap: 3px; margin-bottom: 18px;
+  }
+  .review-stars svg {
+    width: 18px; height: 18px; fill: #f5b731;
+  }
+  .review-text {
+    color: var(--gray);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 22px;
+  }
+  .review-author {
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: var(--white);
+  }
+  .review-source {
+    font-size: 0.72rem;
+    color: var(--gray);
+    margin-top: 4px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .review-source svg {
+    width: 14px; height: 14px;
+  }
+  .reviews-cta {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .reviews-cta a {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: transparent;
+    color: var(--blue-light);
+    border: 2px solid var(--blue);
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .25s, color .25s;
+  }
+  .reviews-cta a:hover {
+    background: var(--blue);
+    color: var(--white);
+  }
+  .reviews-cta a svg {
+    width: 18px; height: 18px; fill: currentColor;
+  }
+  .reviews-header-rating {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 60px;
+  }
+  .reviews-header-rating .rating-badge {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(30,107,196,0.1);
+    border: 1px solid rgba(59,142,232,0.2);
+    border-radius: 8px;
+    padding: 10px 18px;
+  }
+  .rating-badge .rating-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    line-height: 1;
+  }
+  .rating-badge .rating-stars {
+    display: flex; gap: 2px;
+  }
+  .rating-badge .rating-stars svg {
+    width: 16px; height: 16px; fill: #f5b731;
+  }
+  .rating-badge .rating-label {
+    font-size: 0.7rem;
+    color: var(--gray);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
   /* ── MOBILE ── */
   @media (max-width: 900px) {
     nav { padding: 12px 20px; }
@@ -380,6 +484,9 @@
     .footer-top { flex-direction: column; }
     .footer-bottom { flex-direction: column; text-align: center; }
     .ba-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .review-card { padding: 28px 24px; }
+    .reviews-header-rating { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 40px; }
   }
 
 
@@ -580,6 +687,7 @@ body.eb-admin-visible #ebAdminOpen {
     <a href="#services">Services</a>
     <a href="#work">Our Work</a>
     <a href="#why">About</a>
+    <a href="#reviews">Reviews</a>
     <a href="#quote" class="nav-cta">Free Quote</a>
   </div>
 </nav>
@@ -736,6 +844,150 @@ body.eb-admin-visible #ebAdminOpen {
   </div>
 </section>
 
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+<section id="reviews">
+  <div class="section-label">Testimonials</div>
+  <h2 class="section-title">What Our Customers Say</h2>
+  <div class="reviews-header-rating">
+    <div class="rating-badge">
+      <span class="rating-num">5.0</span>
+      <div>
+        <div class="rating-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="rating-label">Google Reviews</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Hunter did a great job cleaning my windows and power washing my house. Will definitely use him again and highly recommend him for all your power washing needs!"</p>
+      <div class="review-author">Nickey Garcia</div>
+      <div class="review-source">
+        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Review
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"We had Hunter pressure wash our windows, brick and pavers all around our house. He was fair, very responsive and did an excellent job. We will definitely be using him again in the future!"</p>
+      <div class="review-author">Tess Riggs</div>
+      <div class="review-source">
+        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Review
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"I highly recommend EverBright Exteriors. Hunter and Christian did an amazing job cleaning our windows. They were very polite, punctual, professional and went above and beyond to deliver excellent results."</p>
+      <div class="review-author">Alejandra Duarte Prickett</div>
+      <div class="review-source">
+        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Review
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Highly recommend EverBright Exteriors! They did an amazing job on my windows, everything looks spotless and brighter than ever."</p>
+      <div class="review-author">Kila Legler</div>
+      <div class="review-source">
+        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Review
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Hunter and his crew have cleaned our windows twice now and they have been professional and friendly. Their work is commendable – our windows are spotless."</p>
+      <div class="review-author">Katherine Smith</div>
+      <div class="review-source">
+        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Review
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Hunter did an amazing job cleaning our windows. He was very polite, professional, and paid attention to detail the entire time."</p>
+      <div class="review-author">Courtnie Kimbro</div>
+      <div class="review-source">
+        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Review
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"I recently had my windows cleaned by Hunter and couldn't be happier with the results! My windows are crystal clear and streak-free."</p>
+      <div class="review-author">Chelsa Claridy</div>
+      <div class="review-source">
+        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Google Review
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-cta">
+    <a href="https://g.page/r/CQmKPlaceholder/review" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      Leave Us a Review
+    </a>
+  </div>
+</section>
+
 <!-- QUOTE FORM -->
 <section id="quote">
   <div class="quote-wrap">
@@ -772,47 +1024,52 @@ body.eb-admin-visible #ebAdminOpen {
     <div>
       <div class="quote-form" id="quoteFormWrap">
         <h3>Request a Free Quote</h3>
-        <div class="form-row">
-          <div class="field">
-            <label>First Name</label>
-            <input type="text" id="fname" placeholder="John">
+        <form id="quoteForm" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="quote">
+          <p style="display:none"><label>Don't fill this: <input name="bot-field"></label></p>
+          <div class="form-row">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" name="first-name" id="fname" placeholder="John" required>
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" name="last-name" id="lname" placeholder="Smith">
+            </div>
           </div>
           <div class="field">
-            <label>Last Name</label>
-            <input type="text" id="lname" placeholder="Smith">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="(615) 000-0000" required>
           </div>
-        </div>
-        <div class="field">
-          <label>Phone Number</label>
-          <input type="tel" id="phone" placeholder="(615) 000-0000">
-        </div>
-        <div class="field">
-          <label>Email Address</label>
-          <input type="email" id="email" placeholder="you@email.com">
-        </div>
-        <div class="field">
-          <label>Service Needed</label>
-          <select id="service">
-            <option value="">Select a service...</option>
-            <option>Window Cleaning</option>
-            <option>Pressure Washing</option>
-            <option>Soft Washing</option>
-            <option>Gutter Cleaning</option>
-            <option>Driveway Cleaning</option>
-            <option>Christmas Lights</option>
-            <option>Multiple Services</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Your Address / Area</label>
-          <input type="text" id="address" placeholder="Mount Juliet, TN">
-        </div>
-        <div class="field">
-          <label>Tell Us More (Optional)</label>
-          <textarea id="notes" placeholder="Approximate number of windows, square footage, special requests..."></textarea>
-        </div>
-        <button class="form-submit" onclick="submitQuote()">Send My Request →</button>
-        <p class="form-note">We typically respond within a few hours. No spam, ever.</p>
+          <div class="field">
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" placeholder="you@email.com">
+          </div>
+          <div class="field">
+            <label>Service Needed</label>
+            <select name="service" id="service" required>
+              <option value="">Select a service...</option>
+              <option>Window Cleaning</option>
+              <option>Pressure Washing</option>
+              <option>Soft Washing</option>
+              <option>Gutter Cleaning</option>
+              <option>Driveway Cleaning</option>
+              <option>Christmas Lights</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Your Address / Area</label>
+            <input type="text" name="address" id="address" placeholder="Mount Juliet, TN">
+          </div>
+          <div class="field">
+            <label>Tell Us More (Optional)</label>
+            <textarea name="notes" id="notes" placeholder="Approximate number of windows, square footage, special requests..."></textarea>
+          </div>
+          <input type="hidden" name="subject" value="New Quote Request from %{formName}">
+          <button type="submit" class="form-submit">Send My Request →</button>
+          <p class="form-note">We typically respond within a few hours. No spam, ever.</p>
+        </form>
       </div>
       <div class="form-success" id="formSuccess">
         <div class="check">✅</div>
@@ -853,32 +1110,25 @@ body.eb-admin-visible #ebAdminOpen {
 </footer>
 
 <script>
-function submitQuote() {
-  const fname = document.getElementById('fname').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const service = document.getElementById('service').value;
-  if (!fname || !phone || !service) {
-    alert('Please fill in your name, phone number, and the service you need.');
-    return;
+document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var form = e.target;
+  try {
+    var response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    });
+    if (response.ok) {
+      document.getElementById('quoteFormWrap').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      alert('Something went wrong. Please call 615-854-5579 instead.');
+    }
+  } catch (err) {
+    alert('Something went wrong. Please call 615-854-5579 instead.');
   }
-  // Build mailto link as fallback
-  const lname = document.getElementById('lname').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const address = document.getElementById('address').value.trim();
-  const notes = document.getElementById('notes').value.trim();
-  const subject = encodeURIComponent('Quote Request – ' + service);
-  const body = encodeURIComponent(
-    'Name: ' + fname + ' ' + lname + '\n' +
-    'Phone: ' + phone + '\n' +
-    'Email: ' + email + '\n' +
-    'Service: ' + service + '\n' +
-    'Address/Area: ' + address + '\n' +
-    'Notes: ' + notes
-  );
-  window.location.href = 'mailto:everbrightproexteriors@gmail.com?subject=' + subject + '&body=' + body;
-  document.getElementById('quoteFormWrap').style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
-}
+});
 </script>
 
 
